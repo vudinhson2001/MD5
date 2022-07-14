@@ -1,1 +1,16 @@
-<p>calculator works!</p>
+<h1>Máy Tính đơn giản</h1>
+<label>Số Thứ Nhất</label>
+<input #number type="number" [value]="first" (change)="setFirst(number.value)">
+<label>Số Thứ Hai</label>
+<input #number1 type="number" [value]="second" (change)="setSecond(number1.value)">
+<select #result id="result" [value]="result" (change)="setResult(result.value)">
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="*">*</option>
+  <option value="/">/</option>
+</select>
+<button (click)="calculate()">Kết Quả</button>
+
+<h1>
+  {{output}}
+</h1>
